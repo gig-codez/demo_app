@@ -1,0 +1,5 @@
+Benefits of firebase
+- It helps in authentication
+- It helps in data stores
+- It object structured database (doesn't mysql database)
+- It aids in achieving in push notifications.

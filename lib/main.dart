@@ -1,7 +1,15 @@
-import 'package:flutter/material.dart';
-import 'home_page.dart';
+// ignore_for_file: depend_on_referenced_packages
 
-void main() {
+import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart'; // Add this line
+import 'screens/home_page.dart';
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // Add this line
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 

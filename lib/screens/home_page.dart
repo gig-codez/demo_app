@@ -1,3 +1,5 @@
+import 'package:demo_app/screens/about_screen.dart';
+import 'package:demo_app/screens/sign_up.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -65,7 +67,33 @@ class HomePage extends StatelessWidget {
         icon: const Icon(Icons.add),
         backgroundColor: Colors.red,
         onPressed: () {
-          // print("Bruno");
+          /**
+           * Navigating apis
+           * MaterialPageRoute => loads the page as is.
+           * PageRouteBuilder => supports animations when routing
+           * 
+           */
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (BuildContext context) {
+                return const SignUp();
+              },
+            ),
+          );
+          // page route builder
+          // Navigator.of(context).push(
+          //   PageRouteBuilder(
+          //     transitionDuration: const Duration(milliseconds: 600),
+          //     pageBuilder: (context, animation1, animation2) {
+          //       return FadeTransition(
+          //         opacity: animation1,
+          //         child: const AboutScreen(
+          //           name: "Bruno Mugamba",
+          //         ),
+          //       );
+          //     },
+          //   ),
+          // );
         },
       ),
       /**
